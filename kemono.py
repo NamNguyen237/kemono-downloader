@@ -18,7 +18,7 @@ def kemono(url):
     # Khởi tạo trình duyệt
     options = webdriver.ChromeOptions()
     options.add_argument("--window-size=800x600")
-    chromedrv = join(sys.path[0], "chromedriver_(135.0.7049.42_(r1427262)).exe")
+    chromedrv = join(sys.path[0], "chromedriver_win64\chromedriver-win64\chromedriver.exe")
     service = Service(executable_path=chromedrv)
     driver = webdriver.Chrome(service=service, options=options)
 
@@ -95,4 +95,4 @@ if __name__ == "__main__":
         end_time = time.time()
         elapsed_time = end_time - start_time
         print(f"Thời gian chạy: {elapsed_time:.2f} giây")
-        print("Tất cả đã hoàn thành!")
+        print("✅ Tất cả đã hoàn thành!")
